@@ -11,6 +11,11 @@ module.exports = {
           dark: "#094137",
           soft: "#CFDFDD",
         },
+        brandYellow: {
+          normal: "#F0BD07",
+          dark: "#785F04",
+          soft: "#FAE9AC",
+        }
         //add your own color
         //https://tailwindcss.com/docs/customizing-colors
       },
@@ -25,5 +30,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 };

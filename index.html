@@ -2,89 +2,332 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <title>Zattabaru Tour and Travel</title>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet" />
+	<title>Zattabaru Tour and Travel</title>
 </head>
 
-<body class="bg-gradient-to-bl from-purple-400 to-zinc-500 h-screen">
-    <nav class="bg-white shadow dark:bg-gray-800">
-        <div class="flex flex-col items-start w-full">
-            <div class="flex flex-col md:flex-row md:justify-between md:items-center w-full ">
-                <div class="flex w-full max-w-7xl py-2 mx-auto items-center justify-between">
-                    <a class="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
-                        href="#">
-                        <img src="/assets/Logo.png" />
-                    </a>
-                    <a class="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
-                        href="#">Zattabaru</a>
-                </div>
-            </div>
+<body class="min-h-screen">
+	<nav class="bg-white shadow dark:bg-gray-800">
+		<div class="flex flex-col items-start w-full">
+			<div class="flex flex-col md:flex-row md:justify-between md:items-center w-full">
+				<div class="px-4 flex w-full max-w-7xl py-2 sm:mx-auto items-center justify-between">
+					<a class="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
+						href="#">
+						<img src="/assets/Logo.png" />
+					</a>
+					<a class="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
+						href="#">Zattabaru</a>
+				</div>
+			</div>
 
-            <div class="w-full bg-brandGreen-normal py-3">
-                <div class="bg-brandGreen-normal max-w-7xl mx-auto flex-col flex-grow gap-y-2 pb-4 md:pb-0 hidden md:flex md:justify-start md:flex-row md:gap-x-2">
-                    <a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
-                        href="#">Home</a>
-                    <a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
-                        href="#">Profil</a>
-                    <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                        <button @click="open = !open"
-                            class="px-2 py-3 rounded flex justify-between items-center text-white hover:bg-white hover:text-brandGreen-normal text-sm font-medium">
-                            <span>Program</span>
-                            <svg fill="currentColor" viewBox="0 0 20 20"
-                                :class="{ 'rotate-180': open, 'rotate-0': !open }"
-                                class="inline w-4 h-4 ml-1 transition-transform duration-200 transform md:-mt-1">
-                                <path fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        <div x-show="open" x-transition:enter="transition ease-out duration-100"
-                            x-transition:enter-start="transform opacity-0 scale-95"
-                            x-transition:enter-end="transform opacity-100 scale-100"
-                            x-transition:leave="transition ease-in duration-75"
-                            x-transition:leave-start="transform opacity-100 scale-100"
-                            x-transition:leave-end="transform opacity-0 scale-95"
-                            class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-30">
-                            <div class="px-2 py-2 bg-white rounded-md shadow text-gray-800">
-                                <a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
-                                    href="">Umroh Reguler</a>
-                                <a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
-                                    href="">Badal Haji</a>
-                                <a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
-                                    href="">Aqiqah dan Qurban</a>
-                                <a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
-                                    href="">Wakaf Al-Quran</a>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
-                        href="#">Galeri</a>
-                    <a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
-                        href="#">Informasi</a>
-                    <a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
-                        href="#">Kontak</a>
-                    <a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
-                        href="#">Artikel</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <section class="container mx-auto pt-20">
-        <h1 class="text-white text-3xl text-center">
-            <p class="mb-8">Vite + Tailwind CSS + Awesomeness</p>
-        </h1>
-        <div class="mx-auto text-center">
-            <a href='https://github.com/hasinhayder/tailwind-boilerplate'
-                class=" text-white bg-cyan-500 font-semibold border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Download</a>
-            <a target="_blank" href='https://github.com/hasinhayder'
-                class="ml-4 text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Don't
-                Click</a>
-        </div>
-    </section>
-    <script type="module" src="/assets/js/main.js"></script>
+			<div class="w-full bg-brandGreen-normal py-3">
+				<div
+					class="bg-brandGreen-normal max-w-7xl mx-auto flex-col flex-grow gap-y-2 pb-4 md:pb-0 hidden md:flex md:justify-start md:flex-row md:gap-x-2">
+					<a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
+						href="#">Home</a>
+					<a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
+						href="#">Profil</a>
+					<div @click.away="open = false" class="relative" x-data="{ open: false }">
+						<button @click="open = !open"
+							class="px-2 py-3 rounded flex justify-between items-center text-white hover:bg-white hover:text-brandGreen-normal text-sm font-medium">
+							<span>Program</span>
+							<svg fill="currentColor" viewBox="0 0 20 20" :class="{ 'rotate-180': open, 'rotate-0': !open }"
+								class="inline w-4 h-4 ml-1 transition-transform duration-200 transform md:-mt-1">
+								<path fill-rule="evenodd"
+									d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+									clip-rule="evenodd"></path>
+							</svg>
+						</button>
+						<div x-show="open" x-transition:enter="transition ease-out duration-100"
+							x-transition:enter-start="transform opacity-0 scale-95"
+							x-transition:enter-end="transform opacity-100 scale-100"
+							x-transition:leave="transition ease-in duration-75"
+							x-transition:leave-start="transform opacity-100 scale-100"
+							x-transition:leave-end="transform opacity-0 scale-95"
+							class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-30">
+							<div class="px-2 py-2 bg-white rounded-md shadow text-gray-800">
+								<a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
+									href="">Umroh Reguler</a>
+								<a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
+									href="">Badal Haji</a>
+								<a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
+									href="">Aqiqah dan Qurban</a>
+								<a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
+									href="">Wakaf Al-Quran</a>
+							</div>
+						</div>
+					</div>
+					<a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
+						href="#">Galeri</a>
+					<a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
+						href="#">Informasi</a>
+					<a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
+						href="#">Kontak</a>
+					<a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
+						href="#">Artikel</a>
+				</div>
+				<div class="relative z-10 flex justify-end items-center lg:hidden" @click.away="open = false"
+					x-data="{ open: false }">
+					<!-- Mobile menu button -->
+					<div class="mx-4">
+						<button type="button" @click="open = !open"
+							class="rounded-md p-2 inline-flex items-center justify-center text-white hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+							aria-controls="mobile-menu" aria-expanded="false">
+							<span class="sr-only">Open menu</span>
+							<template x-if="!open">
+								<svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+									stroke-width="2" stroke="currentColor" aria-hidden="true">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+								</svg>
+							</template>
+							<template x-if="open">
+								<svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+									stroke-width="2" stroke="currentColor" aria-hidden="true">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+								</svg>
+							</template>
+						</button>
+					</div>
+					<nav x-show="open" x-transition:enter="transition ease-out duration-100"
+						x-transition:enter-start="transform opacity-0 scale-95"
+						x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
+						x-transition:leave-start="transform opacity-100 scale-100"
+						x-transition:leave-end="transform opacity-0 scale-95"
+						class="absolute top-10 my-2 rounded-b-md bg-white w-full lg:hidden" aria-label="Global" id="mobile-menu">
+						<div class="pt-2 pb-3 px-2 space-y-1">
+							<!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-900 hover:bg-gray-50 hover:text-gray-900" -->
+							<a href="#" class="bg-gray-100 text-gray-900 block rounded-md py-2 px-3 text-base font-medium"
+								aria-current="page">Home</a>
+
+							<a href="#"
+								class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 block rounded-md py-2 px-3 text-base font-medium">Profil</a>
+
+							<a href="#"
+								class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 block rounded-md py-2 px-3 text-base font-medium">Program</a>
+
+							<a href="#"
+								class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 block rounded-md py-2 px-3 text-base font-medium">Galeri</a>
+
+							<a href="#"
+								class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 block rounded-md py-2 px-3 text-base font-medium">Informasi</a>
+
+							<a href="#"
+								class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 block rounded-md py-2 px-3 text-base font-medium">Hubungi
+								Kami</a>
+
+							<a href="#"
+								class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 block rounded-md py-2 px-3 text-base font-medium">Artikel</a>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<section class="relative bg-white max-h-[768px]">
+		<img class="absolute inset-0 object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
+			src="/assets/hero-image.jpg" alt="Couple on a bed with a dog" />
+
+		<div class="inset-0 absolute bg-gradient-to-r from-zinc-800/70 to-transparent"></div>
+
+		<div class="relative max-w-screen-xl h-[768px] px-4 py-32 mx-auto lg:items-center lg:flex">
+			<div class="max-w-xl text-center sm:text-left">
+				<h1 class="text-3xl text-white sm:text-5xl">
+					Selangkah lebih mudah & berkah ke
+					<span class="font-extrabold text-white">BAITULAH</span> bersama
+					<span class="font-extrabold text-brandYellow-normal">ZATTABARU</span>
+				</h1>
+			</div>
+
+			<div class="hidden sm:absolute container mx-auto -bottom-16">
+				<div
+					class="m-auto flex flex-row items-end gap-x-4 bg-white border border-gray-200 p-6 rounded-xl md:p-8 md:w-10/12 lg:w-8/12">
+					<div class="w-full">
+						<label id="listbox-label" class="block text-sm font-medium text-gray-700">
+							Nama Program
+						</label>
+						<div class="mt-1 relative" @click.away="open = false" x-data="{ open: false }">
+							<button type="button" @click="open = !open"
+								class="bg-white relative w-full border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+								aria-haspopup="listbox" aria-expanded="true" aria-labelledby="listbox-label">
+								<span class="block truncate text-gray-400">
+									Pilih Program yang tersedia
+								</span>
+								<span class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+									<!-- Heroicon name: solid/selector -->
+									<svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+										fill="currentColor" aria-hidden="true">
+										<path fill-rule="evenodd"
+											d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+											clip-rule="evenodd" />
+									</svg>
+								</span>
+							</button>
+							<ul x-show="open" x-transition:enter="transition ease-out duration-100"
+								x-transition:enter-start="transform opacity-0 scale-95"
+								x-transition:enter-end="transform opacity-100 scale-100"
+								x-transition:leave="transition ease-in duration-75"
+								x-transition:leave-start="transform opacity-100 scale-100"
+								x-transition:leave-end="transform opacity-0 scale-95"
+								class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
+								tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-3">
+								<li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+									id="listbox-option-0" role="option">
+									Umroh
+								</li>
+								<li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+									id="listbox-option-0" role="option">
+									Badal Haji
+								</li>
+								<li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+									id="listbox-option-0" role="option">
+									Aqiqah dan Qurban
+								</li>
+								<li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+									id="listbox-option-0" role="option">
+									Wakaf Al-Quran
+								</li>
+
+								<!-- More items... -->
+							</ul>
+						</div>
+					</div>
+
+					<div class="w-full">
+						<label id="listbox-label" class="block text-sm font-medium text-gray-700">
+							Jadwal Tersedia
+						</label>
+						<div class="mt-1 relative" @click.away="open = false" x-data="{ open: false }">
+							<button type="button" @click="open = !open"
+								class="bg-white relative w-full border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+								aria-haspopup="listbox" aria-expanded="true" aria-labelledby="listbox-label">
+								<span class="block truncate text-gray-400">
+									Pilih Jadwal yang tersedia
+								</span>
+								<span class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+									<!-- Heroicon name: solid/selector -->
+									<svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+										fill="currentColor" aria-hidden="true">
+										<path fill-rule="evenodd"
+											d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+											clip-rule="evenodd" />
+									</svg>
+								</span>
+							</button>
+							<ul x-show="open" x-transition:enter="transition ease-out duration-100"
+								x-transition:enter-start="transform opacity-0 scale-95"
+								x-transition:enter-end="transform opacity-100 scale-100"
+								x-transition:leave="transition ease-in duration-75"
+								x-transition:leave-start="transform opacity-100 scale-100"
+								x-transition:leave-end="transform opacity-0 scale-95"
+								class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
+								tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-3">
+								<li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+									id="listbox-option-0" role="option">
+									Agustus 2022
+								</li>
+								<li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+									id="listbox-option-0" role="option">
+									September 2022
+								</li>
+								<li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+									id="listbox-option-0" role="option">
+									Oktober 2022
+								</li>
+								<li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+									id="listbox-option-0" role="option">
+									November 2022
+								</li>
+								<li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+									id="listbox-option-0" role="option">
+									Desember 2022
+								</li>
+
+								<!-- More items... -->
+							</ul>
+						</div>
+					</div>
+
+					<div>
+						<button type="button"
+							class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+							Cari
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-20 sm:py-40 bg-gray-100">
+		<div class="container mx-auto px-6 text-gray-600 md:px-12 xl:px-6">
+			<div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+				<div class="w-full md:5/12 lg:w-5/12">
+					<img src="assets/tentang-kami.png" class="rounded-md" alt="image" loading="lazy" width="" height="" />
+				</div>
+				<div class="md:7/12 lg:w-6/12">
+					<h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
+						Tentang Kami
+					</h2>
+					<p class="mt-6 text-gray-600">
+						<b>Zatabbaru Umroh dan Haji Plus</b> merupakan perusahaan jasa
+						yang telah mengantongi ijin resmi yang bergerak di bidang travel
+						umroh dan haji plus. Melalui berbagai program pilihan seperti
+						tabungan dan talangan umroh, Alhamdulillah Zatabbaru telah
+						berhasil memberangkatkan ratusan jamaah sejak awal berdiri yaitu
+						tahun 2017 hingga saat ini. Dengan program unggulan “ibadah
+						maksimal” , dan slogan “selangkah lebih mudah dan berkah ke
+						baitullah”, zatabbaru merangkul jamaah dengan memberikan solusi
+						terbaik demi mempermudah langkah menuju Baitullah, untuk kemudian
+						menunaikan ibadah dengan maksimal demi meraih berkah ilahi.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="pb-20 sm:pb-40 relative bg-white">
+		<div>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+				<path class="text-gray-100" fill="currentColor" fill-opacity="1"
+					d="M0,128L80,112C160,96,320,64,480,64C640,64,800,96,960,96C1120,96,1280,64,1360,48L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
+				</path>
+			</svg>
+		</div>
+		<div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+			<div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+				<div class="flex flex-col w-full items-center">
+					<h2
+						class="mb-8 sm:mb-14 text-2xl font-bold md:text-4xl border-b-4 text-brandGreen-normal border-brandYellow-normal">
+						Video Profil
+					</h2>
+					<img class="rounded-md" src="/assets/video-placeholder.jpg" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="relative py-20 sm:py-40 bg-white">
+		<div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+			<div class="md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+				<div class="flex flex-col gap-y-4 w-full items-center">
+					<h2
+						class="mb-8 sm:mb-14 text-2xl font-bold md:text-4xl border-b-4 text-brandGreen-normal border-brandYellow-normal">
+						Program Tersedia
+					</h2>
+					<img class="rounded-md" src="/assets/video-placeholder.jpg" />
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="module" src="/assets/js/main.js"></script>
 </body>
 
 </html>
