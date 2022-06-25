@@ -322,12 +322,165 @@
 						class="mb-8 sm:mb-14 text-2xl font-bold md:text-4xl border-b-4 text-brandGreen-normal border-brandYellow-normal">
 						Program Tersedia
 					</h2>
-					<img class="rounded-md" src="/assets/video-placeholder.jpg" />
+					<div class="mt-3 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4" x-data="program">
+						<template x-for="data in program" :key="data.id">
+							<div
+								class="col-span-1 flex flex-col gap-y-2 justify-between bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+								<a href="#">
+									<img class="rounded-t-lg w-full bg-cover object-cover max-h-56" src="/assets/program-1.jpg" alt="" />
+								</a>
+								<div class="px-5">
+									<a href="#">
+										<h5 x-text="data.name" class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+										</h5>
+									</a>
+									<p x-text="data.description" class="mb-3 font-normal text-gray-700 dark:text-gray-400"></p>
+								</div>
+								<div class="px-5">
+									<!-- Body -->
+									<ul role="list">
+										<template x-for="sub in data.keunggulan" :key="sub.id">
+											<li class="flex space-x-3">
+												<svg class="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500" fill="currentColor"
+													viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd"
+														d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+														clip-rule="evenodd"></path>
+												</svg>
+												<dl class="mt-1 flex-grow flex flex-col justify-between">
+													<dt x-text="sub.name" class="font-light text-gray-600 text-xs">Title</dt>
+													<dd x-text="sub.desc" class="font-bold text-sm">Paradigm Representative</dd>
+												</dl>
+												<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"></span>
+											</li>
+										</template>
+									</ul>
+								</div>
+								<div class="p-5">
+									<button type="button"
+										class="w-full items-center px-4 py-2 border border-transparent text-sm font-medium rounded-full shadow-sm text-white bg-brandYellow-normal hover:bg-brandYellow-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Lihat
+										Detail</button>
+								</div>
+							</div>
+						</template>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<script type="module" src="/assets/js/main.js"></script>
+	<script>
+		const program = [
+			{
+				id: 1,
+				name: "Program Umroh Reguler 1",
+				description: "Program 1 description",
+				keunggulan: [
+					{
+						id: 1,
+						name: "Durasi Perjalanan",
+						desc: "10 Hari"
+					},
+					{
+						id: 2,
+						name: "Bulan",
+						desc: "Agustus"
+					},
+					{
+						id: 3,
+						name: "Maskapai",
+						desc: "Garuda Indonesia/ Saudi Arabian Airlines (SV)/ Lion Premium"
+					},
+					{
+						id: 4,
+						name: "Hotel",
+						desc: "Bintang 4"
+					},
+				],
+			},
+			{
+				id: 2,
+				name: "Program Aqiqah & Qurban",
+				description: "Program 2 description",
+				keunggulan: [
+					{
+						id: 1,
+						name: "Durasi Perjalanan",
+						desc: "10 Hari"
+					},
+					{
+						id: 2,
+						name: "Bulan",
+						desc: "Agustus"
+					},
+					{
+						id: 3,
+						name: "Maskapai",
+						desc: "Garuda Indonesia/ Saudi Arabian Airlines (SV)/ Lion Premium"
+					},
+					{
+						id: 4,
+						name: "Hotel",
+						desc: "Bintang 4"
+					},
+				],
+			},
+			{
+				id: 3,
+				name: "Program Badal Haji",
+				description: "Program 2 description",
+				keunggulan: [
+					{
+						id: 1,
+						name: "Durasi Perjalanan",
+						desc: "10 Hari"
+					},
+					{
+						id: 2,
+						name: "Bulan",
+						desc: "Agustus"
+					},
+					{
+						id: 3,
+						name: "Maskapai",
+						desc: "Garuda Indonesia/ Saudi Arabian Airlines (SV)/ Lion Premium"
+					},
+					{
+						id: 4,
+						name: "Hotel",
+						desc: "Bintang 4"
+					},
+				],
+			},
+			{
+				id: 4,
+				name: "Program Wakaf Al-Quran",
+				description: "Program 2 description",
+				keunggulan: [
+					{
+						id: 1,
+						name: "Durasi Perjalanan",
+						desc: "10 Hari"
+					},
+					{
+						id: 2,
+						name: "Bulan",
+						desc: "Agustus"
+					},
+					{
+						id: 3,
+						name: "Maskapai",
+						desc: "Garuda Indonesia/ Saudi Arabian Airlines (SV)/ Lion Premium"
+					},
+					{
+						id: 4,
+						name: "Hotel",
+						desc: "Bintang 4"
+					},
+				],
+			},
+		];
+	</script>
 </body>
 
 </html>
