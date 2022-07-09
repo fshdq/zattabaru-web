@@ -339,8 +339,8 @@
 						class="mb-8 sm:mb-14 text-2xl font-bold md:text-4xl border-b-4 text-brandGreen-normal border-brandYellow-normal">
 						Video Profil
 					</h2>
-					<iframe width="768" height="432" src="https://www.youtube.com/embed/NpEaa2P7qZI" title="YouTube video player"
-						frameborder="0"
+					<iframe class="aspect-video w-full sm:max-w-3xl" src="https://www.youtube.com/embed/NpEaa2P7qZI"
+						title="YouTube video player" frameborder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 						allowfullscreen></iframe>
 				</div>
@@ -443,51 +443,54 @@
 		</svg>
 	</section>
 
-	<section id="testimoni" class="relative py-20 sm:py-40 bg-white">
-		<div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-			<div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
-				<div class="flex flex-col w-full items-center">
-					<h2
-						class="mb-8 sm:mb-14 text-2xl font-bold md:text-4xl border-b-4 text-brandGreen-normal border-brandYellow-normal">
-						Testimonial
-					</h2>
-					<div class="max-w-5xl px-4 py-8 mx-auto flex">
-						<div class="swiper mySwiper">
-							<div class="swiper-wrapper gap-x-4" x-data="testi">
+	<section id="testimoni" class="py-16">
+		<div class="container m-auto text-gray-600 md:px-12 xl:px-6">
+			<div class="mb-12 space-y-4 px-6 md:px-0">
+				<h2 class="text-center text-2xl text-brandGreen-normal font-bold md:text-4xl">Testimoni</h2>
+				<p class="text-center">Inilah pendapat alumni tentang <span class="font-bold">Zattabaru</span></p>
+			</div>
 
-								<template x-for="data in testi" :key="data.id">
-									<div class="swiper-slide">
-										<div class="p-8 bg-gray-100 rounded-lg">
-											<div class="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:items-center">
-												<div class="aspect-w-1 aspect-h-1">
-													<img :src="data.gambar" alt="" class="w-full object-cover rounded-lg" />
-												</div>
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper pb-8" x-data="testi">
 
-												<blockquote class="sm:col-span-2">
-													<p class="text-xl font-medium sm:text-2xl" x-text="data.isi">
-													</p>
-
-													<cite class="flex flex-col mt-8 not-italic">
-														<p class="text-sm font-bold text-gray-700 uppercase sm:ml-3" x-text="data.nama">
-														</p>
-														<p class="text-sm font-normal text-gray-500 uppercase sm:ml-3" x-text="data.alamat">
-														</p>
-													</cite>
-												</blockquote>
-											</div>
-										</div>
+					<template x-for="data in testi" :key="data.id">
+						<div class="swiper-slide !bg-transparent px-6 md:px-0">
+							<div class="rounded-xl bg-white shadow-xl md:mx-auto lg:w-9/12 xl:w-7/12">
+								<div class="grid md:grid-cols-2 p-6 ">
+									<img :src="data.gambar" class="aspect-square rounded-xl h-full w-full object-cover" alt="image"
+										width="640" height="422" loading="lazy">
+									<div class="flex flex-col justify-center mx-auto py-6 text-center sm:p-8">
+										<p class="text-gray-600 pb-6 sm:pb-8" x-text="data.isi" />
+										<h6 class="pb-4 text-lg font-semibold leading-none uppercase" x-text="data.nama" />
+										<h6 class="text-sm font-normal leading-none" x-text="data.alamat" />
 									</div>
-								</template>
-
+								</div>
 							</div>
 						</div>
-						<div class="swiper-button-next pr-20"></div>
-						<div class="swiper-button-prev pl-20"></div>
-					</div>
+					</template>
+
 				</div>
+				<div class="swiper-button-next sm:pr-20"></div>
+				<div class="swiper-button-prev sm:pl-20"></div>
+				<div class="swiper-pagination"></div>
 			</div>
 		</div>
 	</section>
+
+	<section id="partner" class="py-16 bg-gray-100">
+		<div class="container m-auto px-6 space-y-8 md:px-12 lg:px-56">
+			<div class="m-auto text-center lg:w-7/12">
+				<h2 class="text-2xl text-gray-700 font-bold md:text-4xl">Partner Kami</h2>
+			</div>
+			<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+				<img src="/assets/logoipsum-logo-4.svg" class="w-32 h-32" />
+				<img src="/assets/logoipsum-logo-6.svg" class="w-32 h-32" />
+				<img src="/assets/logoipsum-logo-7.svg" class="w-32 h-32" />
+				<img src="/assets/logoipsum-logo-8.svg" class="w-32 h-32" />
+			</div>
+		</div>
+	</section>
+
 	<script type="module" src="/assets/js/main.js"></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script>
