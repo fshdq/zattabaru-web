@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <title>Zattabaru Tour and Travel</title>
+</head>
+
+<body class="min-h-screen">
+  <nav class="bg-white shadow dark:bg-gray-800">
+    <div class="flex flex-col items-start w-full">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center w-full">
+        <div class="px-4 flex w-full max-w-7xl py-2 sm:mx-auto items-center justify-between">
+          <a class="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
+            href="#">
+            <img src="/assets/Logo.png" />
+          </a>
+          <div class="flex flex-wrap justify-center gap-2">
+            <button class="p-2 font-semibold text-brandGreen-dark inline-flex items-center space-x-2 rounded">
+              <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </button>
+
+            <button class="p-2 font-semibold text-brandGreen-dark inline-flex items-center space-x-2 rounded">
+              <svg class="w-5 h-5" viewBox="0 0 20 20">
+                <path fill="currentColor"
+                  d="M18.258,3.266c-0.693,0.405-1.46,0.698-2.277,0.857c-0.653-0.686-1.586-1.115-2.618-1.115c-1.98,0-3.586,1.581-3.586,3.53c0,0.276,0.031,0.545,0.092,0.805C6.888,7.195,4.245,5.79,2.476,3.654C2.167,4.176,1.99,4.781,1.99,5.429c0,1.224,0.633,2.305,1.596,2.938C2.999,8.349,2.445,8.19,1.961,7.925C1.96,7.94,1.96,7.954,1.96,7.97c0,1.71,1.237,3.138,2.877,3.462c-0.301,0.08-0.617,0.123-0.945,0.123c-0.23,0-0.456-0.021-0.674-0.062c0.456,1.402,1.781,2.422,3.35,2.451c-1.228,0.947-2.773,1.512-4.454,1.512c-0.291,0-0.575-0.016-0.855-0.049c1.588,1,3.473,1.586,5.498,1.586c6.598,0,10.205-5.379,10.205-10.045c0-0.153-0.003-0.305-0.01-0.456c0.7-0.499,1.308-1.12,1.789-1.827c-0.644,0.28-1.334,0.469-2.06,0.555C17.422,4.782,17.99,4.091,18.258,3.266">
+                </path>
+              </svg>
+            </button>
+            <button class="p-2 font-semibold text-brandGreen-dark inline-flex items-center space-x-2 rounded">
+              <svg class="w-5 h-5" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path fill="currentColor"
+                  d="M38.0766847,15.8542954 C36.0693906,15.7935177 34.2504839,14.8341149 32.8791434,13.5466056 C32.1316475,12.8317108 31.540171,11.9694126 31.1415066,11.0151329 C30.7426093,10.0603874 30.5453728,9.03391952 30.5619062,8 L24.9731521,8 L24.9731521,28.8295196 C24.9731521,32.3434487 22.8773693,34.4182737 20.2765028,34.4182737 C19.6505623,34.4320127 19.0283477,34.3209362 18.4461858,34.0908659 C17.8640239,33.8612612 17.3337909,33.5175528 16.8862248,33.0797671 C16.4386588,32.6422142 16.0833071,32.1196657 15.8404292,31.5426268 C15.5977841,30.9658208 15.4727358,30.3459348 15.4727358,29.7202272 C15.4727358,29.0940539 15.5977841,28.4746337 15.8404292,27.8978277 C16.0833071,27.3207888 16.4386588,26.7980074 16.8862248,26.3604545 C17.3337909,25.9229017 17.8640239,25.5791933 18.4461858,25.3491229 C19.0283477,25.1192854 19.6505623,25.0084418 20.2765028,25.0219479 C20.7939283,25.0263724 21.3069293,25.1167239 21.794781,25.2902081 L21.794781,19.5985278 C21.2957518,19.4900128 20.7869423,19.436221 20.2765028,19.4380839 C18.2431278,19.4392483 16.2560928,20.0426009 14.5659604,21.1729264 C12.875828,22.303019 11.5587449,23.9090873 10.7814424,25.7878401 C10.003907,27.666593 9.80084889,29.7339663 10.1981162,31.7275214 C10.5953834,33.7217752 11.5748126,35.5530237 13.0129853,36.9904978 C14.4509252,38.4277391 16.2828722,39.4064696 18.277126,39.8028054 C20.2711469,40.1991413 22.3382874,39.9951517 24.2163416,39.2169177 C26.0948616,38.4384508 27.7002312,37.1209021 28.8296253,35.4300711 C29.9592522,33.7397058 30.5619062,31.7522051 30.5619062,29.7188301 L30.5619062,18.8324027 C32.7275484,20.3418321 35.3149087,21.0404263 38.0766847,21.0867664 L38.0766847,15.8542954 Z"
+                  id="Fill-1"></path>
+              </svg>
+            </button>
+            <button class="p-2 font-semibold text-brandGreen-dark inline-flex items-center space-x-2 rounded">
+              <svg class="w-5 h-5" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                  d="M25.6440564,8.00125481 C28.524689,8.00651102 29.1340343,8.02966857 30.5968,8.09632 C32.29984,8.17376 33.46272,8.44448 34.48064,8.84 C35.5328,9.24896 36.42496,9.79584 37.31456,10.68544 C38.20416,11.57504 38.75136,12.4672 39.16,13.51936 C39.55552,14.53728 39.82592,15.70016 39.90368,17.4032 C39.9747749,18.9634834 39.9963833,19.5527641 39.9995653,22.9632797 L39.9995653,25.0367203 C39.9963833,28.4472359 39.9747749,29.0365166 39.90368,30.5968 C39.82592,32.29984 39.55552,33.46272 39.16,34.48064 C38.75136,35.5328 38.20416,36.42496 37.31456,37.31456 C36.42496,38.20416 35.5328,38.75104 34.48064,39.16 C33.46272,39.55552 32.29984,39.82624 30.5968,39.90368 C29.0365166,39.9747749 28.4472359,39.9963833 25.0367203,39.9995653 L22.9632797,39.9995653 C19.5527641,39.9963833 18.9634834,39.9747749 17.4032,39.90368 C15.70016,39.82624 14.53728,39.55552 13.51936,39.16 C12.4672,38.75104 11.57504,38.20416 10.68544,37.31456 C9.79584,36.42496 9.24864,35.5328 8.84,34.48064 C8.44448,33.46272 8.17408,32.29984 8.09632,30.5968 C8.02966857,29.1340343 8.00651102,28.524689 8.00125481,25.6440564 L8.00125481,22.3559436 C8.00651102,19.475311 8.02966857,18.8659657 8.09632,17.4032 C8.17408,15.70016 8.44448,14.53728 8.84,13.51936 C9.24864,12.4672 9.79584,11.57504 10.68544,10.68544 C11.57504,9.79584 12.4672,9.24896 13.51936,8.84 C14.53728,8.44448 15.70016,8.17376 17.4032,8.09632 C18.8659657,8.02966857 19.475311,8.00651102 22.3559436,8.00125481 Z M25.0186977,10.8832675 L22.9813023,10.8832675 C19.6322732,10.8861221 19.0771566,10.9057829 17.53472,10.976 C15.97472,11.04736 15.12736,11.30784 14.56384,11.52704 C13.81696,11.81728 13.28384,12.16416 12.72416,12.72384 C12.16416,13.28384 11.81728,13.81696 11.52704,14.56352 C11.30816,15.12736 11.04704,15.97472 10.97632,17.53472 C10.9058103,19.0771566 10.8861244,19.6322732 10.8832677,22.9813023 L10.8832677,25.0186977 C10.8861244,28.3677268 10.9058103,28.9228434 10.97632,30.46528 C11.04704,32.02528 11.30816,32.87264 11.52704,33.43648 C11.81728,34.18304 12.16416,34.71616 12.72416,35.27616 C13.28384,35.83584 13.81696,36.18272 14.56384,36.47296 C15.12736,36.69216 15.97472,36.95264 17.53472,37.024 C19.076864,37.0942171 19.6319556,37.1138779 22.9812271,37.1167325 L25.0187729,37.1167325 C28.3680444,37.1138779 28.923136,37.0942171 30.46528,37.024 C32.02528,36.95264 32.87264,36.69216 33.43616,36.47296 C34.18304,36.18272 34.71616,35.83584 35.27584,35.27616 C35.83584,34.71616 36.18272,34.18304 36.47296,33.43648 C36.69184,32.87264 36.95296,32.02528 37.02368,30.46528 C37.0941897,28.9228434 37.1138756,28.3677268 37.1167323,25.0186977 L37.1167323,22.9813023 C37.1138756,19.6322732 37.0941897,19.0771566 37.02368,17.53472 C36.95296,15.97472 36.69184,15.12736 36.47296,14.56352 C36.18272,13.81696 35.83584,13.28384 35.27584,12.72384 C34.71616,12.16416 34.18304,11.81728 33.43616,11.52704 C32.87264,11.30784 32.02528,11.04736 30.46528,10.976 C28.9228434,10.9057829 28.3677268,10.8861221 25.0186977,10.8832675 Z M24,15.78384 C28.53792,15.78384 32.21632,19.46224 32.21632,23.99984 C32.21632,28.53776 28.53792,32.21616 24,32.21616 C19.46208,32.21616 15.78368,28.53776 15.78368,23.99984 C15.78368,19.46224 19.46208,15.78384 24,15.78384 Z M24,18.66672 C21.0544,18.66672 18.66656,21.05456 18.66656,23.99984 C18.66656,26.94544 21.0544,29.33328 24,29.33328 C26.9456,29.33328 29.33344,26.94544 29.33344,23.99984 C29.33344,21.05456 26.9456,18.66672 24,18.66672 Z M32.540928,13.539232 C33.601088,13.539232 34.460928,14.398752 34.460928,15.459232 C34.460928,16.519392 33.601088,17.379232 32.540928,17.379232 C31.480448,17.379232 30.620928,16.519392 30.620928,15.459232 C30.620928,14.398752 31.480448,13.539232 32.540928,13.539232 Z"
+                  id="Shape" fill="currentColor"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full bg-brandGreen-normal py-3">
+        <div
+          class="bg-brandGreen-normal max-w-7xl mx-auto flex-col flex-grow gap-y-2 pb-4 sm:pb-0 hidden sm:flex sm:justify-start sm:flex-row sm:gap-x-2">
+          <a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
+            href="/">Home</a>
+          <a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
+            href="/profil.html">Profil</a>
+          <div @click.away="open = false" class="relative" x-data="{ open: false }">
+            <button @click="open = !open"
+              class="px-2 py-3 rounded flex justify-between items-center text-white hover:bg-white hover:text-brandGreen-normal text-sm font-medium">
+              <span>Program</span>
+              <svg fill="currentColor" viewBox="0 0 20 20" :class="{ 'rotate-180': open, 'rotate-0': !open }"
+                class="inline w-4 h-4 ml-1 transition-transform duration-200 transform md:-mt-1">
+                <path fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <div x-show="open" x-transition:enter="transition ease-out duration-100"
+              x-transition:enter-start="transform opacity-0 scale-95"
+              x-transition:enter-end="transform opacity-100 scale-100"
+              x-transition:leave="transition ease-in duration-75"
+              x-transition:leave-start="transform opacity-100 scale-100"
+              x-transition:leave-end="transform opacity-0 scale-95"
+              class="absolute left-0 w-full mt-2 origin-top-left rounded-md shadow-lg md:w-[960px] z-30">
+              <div role="toggle" class="p-6 mb-16 sm:mb-0 shadow-xl bg-white rounded-md">
+                <div class="container mx-auto w-full flex flex-row justify-between">
+                  <div class="w-full pr-4 sm:w-1/2 lg:w-1/4 border-b border-slate-200 sm:border-r lg:border-b-0">
+                    <h3 class="font-bold text-xl text-brandGreen-normal text-bold mb-2">Umroh</h3>
+                    <a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
+                      href="">Paket Umroh Reguler Agustus</a>
+                    <a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
+                      href="">Paket Umroh Reguler September</a>
+                    <a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
+                      href="">Paket Umroh Reguler Oktober</a>
+                  </div>
+                  <div class="w-full px-4 sm:w-1/2 lg:w-1/4 border-b border-slate-200 sm:border-r lg:border-b-0">
+                    <h3 class="font-bold text-xl text-brandGreen-normal text-bold mb-2">Umroh Plus</h3>
+                    <a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
+                      href="">Paket Umroh Plus Turki</a>
+                  </div>
+                  <div class="w-full px-4 sm:w-1/2 lg:w-1/4 border-b border-slate-200 sm:border-r lg:border-b-0">
+                    <h3 class="font-bold text-xl text-brandGreen-normal text-bold mb-2">Haji Plus</h3>
+                    <a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
+                      href="">Haji Plus Furoda</a>
+                  </div>
+                  <div class="w-full px-4 sm:w-1/2 lg:w-1/4 border-b border-slate-200 sm:border-r lg:border-b-0">
+                    <h3 class="font-bold text-xl text-brandGreen-normal text-bold mb-2">Badal</h3>
+                    <a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
+                      href="">Badal Haji</a>
+                    <a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
+                      href="">Badal Umroh</a>
+                  </div>
+                  <div class="w-full px-4 sm:w-1/2 lg:w-1/4 border-b border-slate-200 sm:border-r lg:border-b-0">
+                    <a class="font-bold text-xl text-brandGreen-normal text-bold mb-2">Wakaf Alquran</a>
+                    <!-- <a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
+											href="">Badal Haji</a>
+										<a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
+											href="">Badal Umroh</a> -->
+                  </div>
+                  <div class="w-full px-4 sm:w-1/2 lg:w-1/4">
+                    <a class="font-bold text-xl text-brandGreen-normal text-bold mb-2">Aqiqah & Qurban</a>
+                    <!-- <a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
+											href="">Badal Haji</a>
+										<a class="block px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-brandGreen-normal focus:bg-brandGreen-normal focus:outline-none focus:shadow-outline"
+											href="">Badal Umroh</a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
+            href="#">Galeri</a>
+          <a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
+            href="#">Informasi</a>
+          <a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
+            href="#">Kontak</a>
+          <a class="px-2 py-3 rounded inline-flex text-sm leading-5 items-center text-white transition-colors duration-200 transform dark:text-gray-200 hover:bg-white hover:text-brandGreen-normal dark:hover:text-blue-400 md:my-0"
+            href="#">Artikel</a>
+        </div>
+        <div class="relative z-10 flex justify-end items-center sm:hidden" @click.away="open = false"
+          x-data="{ open: false }">
+          <!-- Mobile menu button -->
+          <div class="mx-4">
+            <button type="button" @click="open = !open"
+              class="rounded-md p-2 inline-flex items-center justify-center text-white hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open menu</span>
+              <template x-if="!open">
+                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="2" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </template>
+              <template x-if="open">
+                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="2" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </template>
+            </button>
+          </div>
+          <nav x-show="open" x-transition:enter="transition ease-out duration-100"
+            x-transition:enter-start="transform opacity-0 scale-95"
+            x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
+            x-transition:leave-start="transform opacity-100 scale-100"
+            x-transition:leave-end="transform opacity-0 scale-95"
+            class="absolute top-10 my-2 rounded-b-md bg-white w-full lg:hidden" aria-label="Global" id="mobile-menu">
+            <div class="pt-2 pb-3 px-2 space-y-1">
+              <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-900 hover:bg-gray-50 hover:text-gray-900" -->
+              <a href="#" class="bg-gray-100 text-gray-900 block rounded-md py-2 px-3 text-base font-medium"
+                aria-current="page">Home</a>
+
+              <a href="#"
+                class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 block rounded-md py-2 px-3 text-base font-medium">Profil</a>
+
+              <a href="#"
+                class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 block rounded-md py-2 px-3 text-base font-medium">Program</a>
+
+              <a href="#"
+                class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 block rounded-md py-2 px-3 text-base font-medium">Galeri</a>
+
+              <a href="#"
+                class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 block rounded-md py-2 px-3 text-base font-medium">Informasi</a>
+
+              <a href="#"
+                class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 block rounded-md py-2 px-3 text-base font-medium">Hubungi
+                Kami</a>
+
+              <a href="#"
+                class="text-gray-900 hover:bg-gray-50 hover:text-gray-900 block rounded-md py-2 px-3 text-base font-medium">Artikel</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="relative bg-white max-h-[768px]">
+    <img class="absolute inset-0 object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
+      src="/assets/hero-image.jpg" alt="Couple on a bed with a dog" />
+
+    <div class="inset-0 absolute bg-gradient-to-r from-zinc-800/70 to-transparent"></div>
+
+    <div class="relative max-w-screen-xl h-[768px] px-4 py-32 mx-auto lg:items-center lg:flex">
+      <div class="max-w-xl text-center sm:text-left">
+        <h1 class="text-3xl text-white sm:text-5xl">
+          Selangkah lebih mudah & berkah ke
+          <span class="font-extrabold text-white">BAITULAH</span> bersama
+          <span class="font-extrabold text-brandYellow-normal">ZATTABARU</span>
+        </h1>
+      </div>
+
+      <div class="hidden sm:absolute container mx-auto -bottom-16">
+        <div
+          class="m-auto flex flex-row items-end gap-x-4 bg-white border border-gray-200 p-6 rounded-xl md:p-8 md:w-10/12 lg:w-8/12">
+          <div class="w-full">
+            <label id="listbox-label" class="block text-sm font-medium text-gray-700">
+              Nama Program
+            </label>
+            <div class="mt-1 relative" @click.away="open = false" x-data="{ open: false }">
+              <button type="button" @click="open = !open"
+                class="bg-white relative w-full border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                aria-haspopup="listbox" aria-expanded="true" aria-labelledby="listbox-label">
+                <span class="block truncate text-gray-400">
+                  Pilih Program yang tersedia
+                </span>
+                <span class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                  <!-- Heroicon name: solid/selector -->
+                  <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+              <ul x-show="open" x-transition:enter="transition ease-out duration-100"
+                x-transition:enter-start="transform opacity-0 scale-95"
+                x-transition:enter-end="transform opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-75"
+                x-transition:leave-start="transform opacity-100 scale-100"
+                x-transition:leave-end="transform opacity-0 scale-95"
+                class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
+                tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-3">
+                <li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+                  id="listbox-option-0" role="option">
+                  Umroh
+                </li>
+                <li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+                  id="listbox-option-0" role="option">
+                  Badal Haji
+                </li>
+                <li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+                  id="listbox-option-0" role="option">
+                  Aqiqah dan Qurban
+                </li>
+                <li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+                  id="listbox-option-0" role="option">
+                  Wakaf Al-Quran
+                </li>
+
+                <!-- More items... -->
+              </ul>
+            </div>
+          </div>
+
+          <div class="w-full">
+            <label id="listbox-label" class="block text-sm font-medium text-gray-700">
+              Jadwal Tersedia
+            </label>
+            <div class="mt-1 relative" @click.away="open = false" x-data="{ open: false }">
+              <button type="button" @click="open = !open"
+                class="bg-white relative w-full border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                aria-haspopup="listbox" aria-expanded="true" aria-labelledby="listbox-label">
+                <span class="block truncate text-gray-400">
+                  Pilih Jadwal yang tersedia
+                </span>
+                <span class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                  <!-- Heroicon name: solid/selector -->
+                  <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+              <ul x-show="open" x-transition:enter="transition ease-out duration-100"
+                x-transition:enter-start="transform opacity-0 scale-95"
+                x-transition:enter-end="transform opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-75"
+                x-transition:leave-start="transform opacity-100 scale-100"
+                x-transition:leave-end="transform opacity-0 scale-95"
+                class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
+                tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-3">
+                <li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+                  id="listbox-option-0" role="option">
+                  Agustus 2022
+                </li>
+                <li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+                  id="listbox-option-0" role="option">
+                  September 2022
+                </li>
+                <li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+                  id="listbox-option-0" role="option">
+                  Oktober 2022
+                </li>
+                <li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+                  id="listbox-option-0" role="option">
+                  November 2022
+                </li>
+                <li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-200"
+                  id="listbox-option-0" role="option">
+                  Desember 2022
+                </li>
+
+                <!-- More items... -->
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <button type="button"
+              class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Cari
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="flex items-center justify-center pt-20">
+    <div class="flex items-center p-1 border border-blue-600 dark:border-blue-400 rounded-xl"><button
+        class="px-4 py-2 text-sm font-medium text-white capitalize bg-blue-600 md:py-3 rounded-xl md:px-12">design</button>
+      <button
+        class="px-4 py-2 mx-4 text-sm font-medium text-blue-600 capitalize md:py-3 dark:text-blue-400 dark:hover:text-white focus:outline-none hover:bg-blue-600 hover:text-white rounded-xl md:mx-8 md:px-12">development</button>
+      <button
+        class="px-4 py-2 text-sm font-medium text-blue-600 capitalize md:py-3 dark:text-blue-400 dark:hover:text-white focus:outline-none hover:bg-blue-600 hover:text-white rounded-xl md:px-12">marketing</button>
+    </div>
+  </div>
+
+  <section id="sambutan" class="py-20 sm:py-40">
+    <div class="container mx-auto px-6 text-gray-600 md:px-12 xl:px-6">
+      <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:gap-12">
+        <div class="aspect-square w-full sm:w-1/2">
+          <img src="https://i.pravatar.cc/300?img=56" class="rounded-md w-full" alt="image" loading="lazy" />
+          <div class="flex flex-col mt-4">
+            <h3 class="text-lg font-bold text-slate-600">
+              Bp. Ir. H. Mabrur Zamzam</h3>
+            <p class="text-gray-600 text-sm">
+              Pimpinan Zatabbaru Tour and Travel
+            </p>
+          </div>
+        </div>
+        <div class="w-full sm:1/2">
+          <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
+            Sambutan Pimpinan
+          </h2>
+          <p class="mt-2 sm:mt-6 text-gray-500">
+            Assalamualaikum wr.wb
+
+            Puji syukur kehadirat Allah SWT, yang telah melimpahkan rahmat dan karunia-Nya, sehingga Zatabbaru Umroh &
+            Haji Plus dapat melangkah sejauh ini dan diharapkan terus berkembang kedepannya
+            <br />
+            <br />
+            Keberhasilan dan perkembangan yang telah dicapai hingga saat ini adalah berkat kepercayaan dan dukungan
+            dari
+            seluruh jamaah Zatabbaru Umroh & haji plus. Serta melalui semangat dan dedikasi tinggi dari seluruh
+            karyawan
+            Zatabbaru Umroh & Haji Plus.
+            <br />
+            <br />
+            Melalui program unggulan “Ibadah Maksimal” dan slogan “Selangkah lebih mudah dan berkah ke Baitullah”,
+            Zatabbaru Umroh & Haji Plus, berharap bisa merangkul seluruh jamaah dari berbagai kalangan dan latar
+            belakang dengan memberikan solusi terbaik demi mempermudah langkah menuju Baitullah untuk kemudian
+            menunaikan ibadah dengan maksimal dan meraih berkah ilahi.
+            <br />
+            <br />
+            Kami juga menyadari bahwa kami masih jauh dari kata sempurna, maka dari itu kami senantiasa terbuka untuk
+            semua saran dari rekan-rekan jamaah semuanya.
+            <br />
+            <br />
+            Akhir kata, kami mengucapkan terimakasih yang sebesar-besarnya kepada seluruh jamaah zatabbaru dan seluruh
+            karyawan Zatabbaru umroh & haji plus yang telah berperan penuh dalam setiap perjalanan karir zatabbaru
+            hingga saat ini. Semoga Allah SWT senantiasa, melimpahka rahmatnya kepada kita semua, Aammiin.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tentang-kami">
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="sm:mx-auto">
+        <h2
+          class="text-center mb-4 font-sans text-2xl md:text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+          Tentang Kami
+        </h2>
+        <p class="text-slate-600 sm:px-4">
+          Zatabbaru Umroh dan Haji Plus merupakan perusahaan yang bergerak di bidang penyelenggara umroh dan haji plus
+          dengan mengusung program unggulan “Ibadah Maksimal” dan slogan “Selangkah lebih mudah ke Baitullah”.
+          <br />
+          <br />
+          Zatabbaru di dirikan pada tahun 2017 di Klaten, Jawa Tengah oleh Bp. Ir. H. Mabrur Zamzam. Sejak berdirinya,
+          hingga saat ini, Zatabbaru telah berhasil memberangkatkan hingga ratusan jamaah ke Baitullah. Zatabbaru juga
+          telah mengantongi ijin resmi dari PPIU dengan nomor SK U.368 tahun 2021 <span><a
+              href="https://simpu.kemenag.go.id/home/detail/1583" class="text-blue-500 font-bold">(cek
+              disini)</a></span> .
+          <br />
+          <br />
+          Pada awal perjalannya, pemasaran jasa umroh dan haji plus Zatabbaru menggunakan teknik manual. Namun seiring
+          bertumbuhnya Zatabbaru dan untuk mengikuti perkembangan pasar, kini pemasaran Zatabbaru mulai merambah ke
+          dunia digital.
+          Di awal masa pandemi covid-19, Zatabbaru juga sempat mengalami vacum selama kurang lebih satu tahun tanpa
+          pemberangkatan jamaah. Hingga di awal tahun 2022 di bulan maret, akhirnya Zatabbaru kembali menerbangkan
+          jamaah perdana dalam program umroh new normal. Tentunya perjalanan jamaah dalam program ini sudah
+          disesuaikan
+          dengan protokol kesehatan dari Indonesia maupun Arab Saudi.
+          <br />
+          <br />
+          Memiliki berbagai program, Zatabbaru ingin menyasar masyarakat dari berbagai latar belakang, dengan
+          menawarkan
+          solusi demi mempermudah langkah menuju Baitullah. Salah satu program kami yaitu, tabungan dan talangan umroh
+          yang bekerja sama dengan KSPPS ZATABBARU SEJAHTERA MANDIRI melalui tabungan dan talangan umroh, calon jamaah
+          zatabbaru tetap bisa mengunjungi baitullah, tanpa terhalang masalah finansial.
+          <br />
+          <br />
+          Selain itu zatabbaru juga memiliki program unggulan “Ibadah Maksimal” yang berarti bahwa Zatabbaru
+          memaksimalkan kegiatan selama di Tanah Suci, untuk beribadah kepada Allah, demi meraih ridho ilahi. Hal ini
+          tentu berbeda dengan biro yang lain, yang kadang malah mem fokuskan konsentrasi pada kegiatan city tour,
+          atau
+          kegiatan lainnya.
+
+        </p>
+        <hr class="w-full my-8 border-gray-300" />
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="mb-16 text-center">
+        <h2 class="mb-4 text-center text-2xl text-gray-900 font-bold md:text-4xl">Struktur Manajemen dan Tim</h2>
+        <p class="text-gray-600 lg:w-8/12 lg:mx-auto">Kami memiliki jajaran manajemen dan tim yang InsyaAllah solid
+          dan
+          amanah.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-3">
+        <div class="flex flex-col items-center p-4 border sm:p-6 rounded-xl dark:border-gray-700"><img
+            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=880&amp;q=80"
+            alt="" class="object-cover w-full rounded-xl aspect-square">
+          <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white">arthur melo</h1>
+          <p class="mt-2 text-gray-500 capitalize dark:text-gray-300">design director</p>
+          <div class="flex mt-3 -mx-2"><a href="#" aria-label="Reddit"
+              class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"><svg
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current">
+                <path
+                  d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
+                </path>
+              </svg></a> <a href="#" aria-label="Facebook"
+              class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"><svg
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current">
+                <path
+                  d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                </path>
+              </svg></a> <a href="#" aria-label="Github"
+              class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"><svg
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current">
+                <path
+                  d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                </path>
+              </svg></a></div>
+        </div>
+        <div class="flex flex-col items-center p-4 border sm:p-6 rounded-xl dark:border-gray-700">
+          <img
+            src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=764&amp;q=80"
+            alt="" class="object-cover w-full rounded-xl aspect-square">
+          <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white">Pamela Anderson</h1>
+          <p class="mt-2 text-gray-500 capitalize dark:text-gray-300">Lead Developer</p>
+          <div class="flex mt-3 -mx-2"><a href="#" aria-label="Reddit"
+              class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"><svg
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current">
+                <path
+                  d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
+                </path>
+              </svg></a> <a href="#" aria-label="Facebook"
+              class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"><svg
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current">
+                <path
+                  d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                </path>
+              </svg></a> <a href="#" aria-label="Github"
+              class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"><svg
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current">
+                <path
+                  d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                </path>
+              </svg></a></div>
+        </div>
+        <div class="flex flex-col items-center p-4 border sm:p-6 rounded-xl dark:border-gray-700"><img
+            src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=880&amp;q=80"
+            alt="" class="object-cover w-full rounded-xl aspect-square">
+          <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white">John Doe</h1>
+          <p class="mt-2 text-gray-500 capitalize dark:text-gray-300">Full stack developer</p>
+          <div class="flex mt-3 -mx-2"><a href="#" aria-label="Reddit"
+              class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"><svg
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current">
+                <path
+                  d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
+                </path>
+              </svg></a> <a href="#" aria-label="Facebook"
+              class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"><svg
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current">
+                <path
+                  d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                </path>
+              </svg></a> <a href="#" aria-label="Github"
+              class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"><svg
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current">
+                <path
+                  d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                </path>
+              </svg></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section if="visimisi">
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        <h2
+          class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+          Visi
+        </h2>
+        <p class="text-base text-gray-700 md:text-lg">
+          "Menjadi perusahaan perjalanan umroh haji dengan memberikan pelayanan ibadah maksimal untuk jamaah dan dikenal
+          seluruh Indonesia"
+        </p>
+      </div>
+      <div class="grid max-w-screen-lg gap-8 lg:grid-cols-2 sm:mx-auto">
+        <div class="flex flex-col justify-center">
+          <h2
+            class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+            Misi
+          </h2>
+          <div class="flex items-center">
+            <div class="mr-4">
+              <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h6 class="mb-2 leading-5">
+                Memberikan solusi untuk menemani jamaah umroh & haji ke baitullah
+              </h6>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div class="mr-4">
+              <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h6 class="mb-2 leading-5">Memberikan pelayanan yang baik dari persiapan hingga kepulangan
+                jamaah
+              </h6>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div class="mr-4">
+              <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h6 class="mb-2 leading-5">Memastikan jamaah mendapatkan pengalaman umroh yang maksimal
+              </h6>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div class="mr-4">
+              <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h6 class="mb-2 leading-5">Membangun komunitas yang bermanfaat
+
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-100 rounded-xl">
+    <div class="max-w-7xl mx-auto px-6 py-16 space-y-8 text-gray-600 md:px-12 lg:px-20">
+      <div class="flex flex-wrap gap-4 items-center justify-between pb-8 border-b">
+        <img width="100" height="42" src="/assets/Logo.png" alt="logo tailus" class="w-32" />
+        <!-- <div class="flex gap-6">
+					<a href="#" target="blank" aria-label="github" class="hover:text-cyan-600">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github"
+							viewBox="0 0 16 16">
+							<path
+								d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+						</svg>
+					</a>
+					<a href="#" target="blank" aria-label="twitter" class="hover:text-cyan-600">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter"
+							viewBox="0 0 16 16">
+							<path
+								d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+						</svg>
+					</a>
+					<a href="#" target="blank" aria-label="medium" class="hover:text-cyan-600">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-medium"
+							viewBox="0 0 16 16">
+							<path
+								d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z" />
+						</svg>
+					</a>
+				</div> -->
+      </div>
+      <div class="grid grid-cols-2 gap-6 sm:grid-cols-4 md:grid-cols-7">
+        <div>
+          <h6 class="text-lg font-medium text-cyan-900">Home</h6>
+          <!-- <ul class="list-inside mt-4 space-y-4">
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">About</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Customers</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Enterprise</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Partners</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Jobs</a>
+						</li>
+					</ul> -->
+        </div>
+        <div>
+          <h6 class="text-lg font-medium text-cyan-900">Profil</h6>
+          <!-- <ul class="list-inside mt-4 space-y-4">
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">About</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Customers</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Enterprise</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Partners</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Jobs</a>
+						</li>
+					</ul> -->
+        </div>
+        <div>
+          <h6 class="text-lg font-medium text-cyan-900">Program</h6>
+          <ul class="list-inside mt-4 space-y-4">
+            <li>
+              <a href="#" class="hover:text-cyan-600 transition">Umroh</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-cyan-600 transition">Umroh Plus</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-cyan-600 transition">Haji Plus</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-cyan-600 transition">Badal</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-cyan-600 transition">Waqaf Al-Quran</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="text-lg font-medium text-cyan-900">Galeri</h6>
+          <!-- <ul class="list-inside mt-4 space-y-4">
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">About</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Customers</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Enterprise</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Partners</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Jobs</a>
+						</li>
+					</ul> -->
+        </div>
+        <div>
+          <h6 class="text-lg font-medium text-cyan-900">Informasi</h6>
+          <!-- <ul class="list-inside mt-4 space-y-4">
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">About</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Customers</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Enterprise</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Partners</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Jobs</a>
+						</li>
+					</ul> -->
+        </div>
+        <div>
+          <h6 class="text-lg font-medium text-cyan-900">Hubungi Kami</h6>
+          <!-- <ul class="list-inside mt-4 space-y-4">
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">About</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Customers</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Enterprise</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Partners</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Jobs</a>
+						</li>
+					</ul> -->
+        </div>
+        <div>
+          <h6 class="text-lg font-medium text-cyan-900">Artikel</h6>
+          <!-- <ul class="list-inside mt-4 space-y-4">
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">About</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Customers</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Enterprise</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Partners</a>
+						</li>
+						<li>
+							<a href="#" class="hover:text-cyan-600 transition">Jobs</a>
+						</li>
+					</ul> -->
+        </div>
+      </div>
+      <div class="flex justify-between px-4 py-3 rounded-md bg-gray-200 text-gray-600">
+        <span>&copy; Zattabaru <span id="year"></span></span>
+        <a href="#" class="font-medium transition hover:text-cyan-600">Licence</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+
+</html>
